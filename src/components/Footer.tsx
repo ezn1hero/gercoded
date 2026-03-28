@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SocialLinks from './shared/SocialLinks';
 
 const Footer: React.FC = () => {
   const footerVariants = {
@@ -15,9 +16,9 @@ const Footer: React.FC = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
     >
-      <div className="container mx-auto px-4">
-        <p>&copy; {new Date().getFullYear()} WellCoded. All rights reserved.</p>
-        {/* Optionally add social links or quick navigation here if needed */}
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <p>&copy; {new Date().getFullYear()} Gerda. All rights reserved.</p>
+        <SocialLinks />
       </div>
     </motion.footer>
   );

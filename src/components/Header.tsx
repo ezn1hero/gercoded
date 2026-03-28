@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   const navLinks = [
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
@@ -12,79 +9,34 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
-  const headerVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
-  const mobileMenuVariants = {
-    hidden: { x: "100%", opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 120, damping: 20 } },
-  };
-
   return (
     <motion.header
-      className="fixed top-0 left-0 w-full bg-zinc-950 bg-opacity-90 z-50 py-4 shadow-lg"
-      variants={headerVariants}
-      initial="hidden"
-      animate="visible"
+      className="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-lg border-b border-border"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: 'spring', stiffness: 70, damping: 20 }}
     >
-      <nav className="container mx-auto flex justify-between items-center px-4 md:px-6">
+      <nav className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <motion.a
-          href="#"
-          className="text-3xl font-bold text-blue-400"
-          whileHover={{ scale: 1.05 }}
-        >
-          wellcoded
-        </motion.a>
+        <a href="#" className="text-2xl font-bold text-primary">
+          GERda
+        </a>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <motion.li key={link.name}>
-              <motion.a
+            <li key={link.name}>
+              <a
                 href={link.href}
-                className="text-zinc-200 hover:text-blue-400 text-lg transition-colors duration-300"
-                whileHover={{ y: -2 }}
+                className="text-muted hover:text-white transition-colors duration-300"
               >
                 {link.name}
-              </motion.a>
-            </motion.li>
+              </a>
+            </li>
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-zinc-200 focus:outline-none">
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="fixed inset-0 bg-zinc-950 bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
-              variants={mobileMenuVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-            >
-              {navLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  className="text-zinc-200 text-3xl hover:text-blue-400 transition-colors duration-300"
-                  onClick={() => setIsOpen(false)} // Close menu on link click
-                  whileHover={{ scale: 1.1 }}
-                >
-                  {link.name}
-                </motion.a>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Mobile menu could be re-added here if needed */}
       </nav>
     </motion.header>
   );

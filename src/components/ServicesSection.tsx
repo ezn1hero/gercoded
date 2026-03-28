@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layout, Palette, Code, Layers } from 'lucide-react'; // Placeholder icons
+import { Code, Layers, Server } from 'lucide-react'; // Updated icons
 
 interface ServiceCardProps {
   icon: React.ElementType;
@@ -16,11 +16,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
 
   return (
     <motion.div
-      className="bg-zinc-800 rounded-xl p-8 shadow-lg border border-zinc-700 hover:border-blue-500 transition-colors duration-300 transform hover:-translate-y-2"
+      className="bg-zinc-800 rounded-xl p-8 shadow-lg border border-zinc-700 hover:border-purple-500 transition-colors duration-300 transform hover:-translate-y-2"
       variants={cardVariants}
       whileHover={{ scale: 1.03 }}
     >
-      <div className="text-blue-400 mb-4">
+      <div className="text-purple-400 mb-4">
         <Icon size={48} strokeWidth={1.5} />
       </div>
       <h3 className="text-2xl font-bold text-zinc-100 mb-3">{title}</h3>
@@ -32,24 +32,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      icon: Layout,
-      title: 'Web Design',
-      description: 'Creating visually stunning and user-friendly website interfaces that capture your brand essence.',
-    },
-    {
       icon: Code,
-      title: 'Web Development',
-      description: 'Building robust, scalable, and high-performance web applications using modern front-end technologies.',
-    },
-    {
-      icon: Palette,
-      title: 'Branding & UI/UX',
-      description: 'Developing cohesive brand identities and intuitive user experiences for optimal engagement.',
+      title: 'Développement web',
+      description: 'Création de sites web sur mesure, responsives et optimisés pour le référencement.',
     },
     {
       icon: Layers,
-      title: 'SEO & Optimization',
-      description: 'Improving your website\'s visibility on search engines and optimizing for speed and performance.',
+      title: 'Full-stack',
+      description: 'Développement d\'applications web complètes, du front-end au back-end.',
+    },
+    {
+      icon: Server,
+      title: 'Back-end',
+      description: 'Mise en place de serveurs, bases de données et API pour vos applications web.',
     },
   ];
 
@@ -58,7 +53,7 @@ const ServicesSection: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Stagger animation for child elements
+        staggerChildren: 0.1,
       },
     },
   };
@@ -80,11 +75,11 @@ const ServicesSection: React.FC = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: 'easeOut' as const }}
         >
-          Our Services
+          What I do
         </motion.h2>
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          variants={containerVariants} // Apply container variants here for staggerChildren
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={containerVariants}
         >
           {services.map((service, index) => (
             <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />

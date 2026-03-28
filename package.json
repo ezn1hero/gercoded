@@ -1,13 +1,16 @@
 {
-  "name": "portfolio-2026",
+  "name": "gercoded",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://gercoded.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
