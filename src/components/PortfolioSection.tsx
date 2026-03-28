@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function PortfolioSection() {
@@ -41,7 +40,7 @@ export default function PortfolioSection() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" as const }
     }
   };
 
