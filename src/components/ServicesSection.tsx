@@ -30,23 +30,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
 };
 
 const ServicesSection: React.FC = () => {
-  const services = [
-    {
-      icon: Code,
-      title: 'Développement web',
-      description: 'Création de sites web sur mesure, responsives et optimisés pour le référencement.',
-    },
-    {
-      icon: Layers,
-      title: 'Full-stack',
-      description: 'Développement d\'applications web complètes, du front-end au back-end.',
-    },
-    {
-      icon: Server,
-      title: 'Back-end',
-      description: 'Mise en place de serveurs, bases de données et API pour vos applications web.',
-    },
-  ];
+const services = [
+  {
+    title: "Web Automation",
+    description: "Building robust scrapers and automated scripts using Selenium to extract data and streamline repetitive tasks.",
+    icon: Code, 
+  },
+  {
+    title: "Telegram Bots",
+    description: "Creating smart, asynchronous Telegram bots with Telethon and Aiogram for community management and custom services.",
+    icon: Layers, 
+  },
+  {
+    title: "Backend Development",
+    description: "Designing secure APIs, managing databases, and building scalable server-side architecture for modern applications.",
+    icon: Server, 
+  }
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },

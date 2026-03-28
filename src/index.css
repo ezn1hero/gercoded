@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Полностью черный цвет */
   --color-background: #000000; 
   --color-surface: #000000;    
   --color-border: #1a1a1a;     
   --color-muted: #888888;      
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
