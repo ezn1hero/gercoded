@@ -52,6 +52,7 @@ const AboutSection: React.FC = () => {
         { name: "PyCharm", url: "https://www.jetbrains.com/pycharm/" },
         { name: "VS Code", url: "https://code.visualstudio.com/" },
         { name: "Visual Studio 2022", url: "https://visualstudio.microsoft.com/" }
+        { name: "Xcode", url: "https://developer.apple.com/xcode/" }
       ]
     },
     {
