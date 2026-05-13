@@ -23,7 +23,7 @@ const AboutSection: React.FC = () => {
         { name: "Python", url: "https://www.python.org/" },
         { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
         { name: "TypeScript", url: "https://www.typescriptlang.org/" },
-        { name: "SQL", url: "https://en.wikipedia.org/wiki/SQL" }
+        { name: "SQL", url: "https://en.wikipedia.org/wiki/SQL" },
         { name: "Swift", url: "https://www.swift.org/" }
       ]
     },
@@ -52,7 +52,7 @@ const AboutSection: React.FC = () => {
         { name: "PyCharm", url: "https://www.jetbrains.com/pycharm/" },
         { name: "VS Code", url: "https://code.visualstudio.com/" },
         { name: "Visual Studio 2022", url: "https://visualstudio.microsoft.com/" }
-        { name: "Xcode", url: "https://developer.apple.com/xcode/" }
+        { name: "Xcode", url: "https://developer.apple.com/xcode/" },
       ]
     },
     {
