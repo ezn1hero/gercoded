@@ -24,6 +24,7 @@ const AboutSection: React.FC = () => {
         { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
         { name: "TypeScript", url: "https://www.typescriptlang.org/" },
         { name: "SQL", url: "https://en.wikipedia.org/wiki/SQL" }
+        { name: "Swift", url: "https://www.swift.org/" }
       ]
     },
     {
