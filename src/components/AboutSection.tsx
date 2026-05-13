@@ -33,7 +33,8 @@ const AboutSection: React.FC = () => {
         { name: "Telethon", url: "https://docs.telethon.dev/" },
         { name: "Aiogram", url: "https://docs.aiogram.dev/" },
         { name: "Selenium", url: "https://www.selenium.dev/" },
-        { name: "REST API", url: "https://restfulapi.net/" }
+        { name: "REST API", url: "https://restfulapi.net/" },
+        { name: "Swift", url: "https://www.swift.org/" }
       ]
     },
     {
@@ -41,7 +42,8 @@ const AboutSection: React.FC = () => {
       skills: [
         { name: "React", url: "https://react.dev/" },
         { name: "Vite", url: "https://vitejs.dev/" },
-        { name: "Tailwind CSS", url: "https://tailwindcss.com/" }
+        { name: "Tailwind CSS", url: "https://tailwindcss.com/" },
+        { name: "SwiftUI", url: "https://developer.apple.com/swiftui/" }       
       ]
     },
     {
@@ -51,8 +53,8 @@ const AboutSection: React.FC = () => {
         { name: "Docker", url: "https://www.docker.com/" },
         { name: "PyCharm", url: "https://www.jetbrains.com/pycharm/" },
         { name: "VS Code", url: "https://code.visualstudio.com/" },
-        { name: "Visual Studio 2022", url: "https://visualstudio.microsoft.com/" }
-        { name: "Xcode", url: "https://developer.apple.com/xcode/" },
+        { name: "Visual Studio 2022", url: "https://visualstudio.microsoft.com/" },
+        { name: "Xcode", url: "https://developer.apple.com/xcode/" }
       ]
     },
     {
